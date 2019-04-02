@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group>
+    <group android:checkableBehavior="single" android:orderInCategory="100">
         <item
             android:id="@+id/itemHome"
             android:icon="@drawable/ic_shelf"
@@ -13,5 +13,9 @@
             android:id="@+id/itemFav"
             android:icon="@drawable/ic_favorite"
             android:title="@string/my_book"/>
+        <!--<item-->
+            <!--android:id="@+id/itemDownload"-->
+            <!--android:icon="@drawable/ic_download"-->
+            <!--android:title="@string/downloaded"/>-->
     </group>
 </menu>

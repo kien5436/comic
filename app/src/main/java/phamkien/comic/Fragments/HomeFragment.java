@@ -48,7 +48,7 @@ public class HomeFragment extends android.support.v4.app.Fragment {
             public void onResponse(Call<ArrayList<Comic>> call, Response<ArrayList<Comic>> response) {
 
                 ArrayList<Comic> comics = response.body();
-                bookshelfAdapter = new BookshelfAdapter(getContext(), comics);
+                bookshelfAdapter = new BookshelfAdapter(getContext(), comics, HomeFragment.this);
                 gvBookShelf.setAdapter(bookshelfAdapter);
             }
 

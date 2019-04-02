@@ -87,7 +87,7 @@ public class CategoryFragment extends Fragment {
             public void onResponse(Call<ArrayList<Comic>> call, Response<ArrayList<Comic>> response) {
 
                 ArrayList<Comic> comics = response.body();
-                bookshelfAdapter = new BookshelfAdapter(getContext(), comics);
+                bookshelfAdapter = new BookshelfAdapter(getContext(), comics, CategoryFragment.this);
                 gvBookShelf.setAdapter(bookshelfAdapter);
             }
 

@@ -33,12 +33,43 @@ public class Comic implements Parcelable {
     @SerializedName("cover")
     @Expose
     private String cover;
+    @SerializedName("description")
+    @Expose
+    private String description;
+    private String parentId;
+    private boolean like;
+
+    public Comic(String id, String title, String category, String cover, String description, boolean like) {
+        this.id = id;
+        this.title = title;
+        this.category = category;
+        this.cover = cover;
+        this.description = description;
+        this.like = like;
+    }
 
     protected Comic(Parcel in) {
         id = in.readString();
         title = in.readString();
         category = in.readString();
         cover = in.readString();
+        description = in.readString();
+    }
+
+    public String getParentId() {
+        return parentId;
+    }
+
+    public void setParentId(String parentId) {
+        this.parentId = parentId;
+    }
+
+    public boolean isLike() {
+        return like;
+    }
+
+    public void setLike(boolean like) {
+        this.like = like;
     }
 
     public String getId() {
@@ -57,6 +88,14 @@ public class Comic implements Parcelable {
         this.title = title;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -65,8 +104,8 @@ public class Comic implements Parcelable {
         this.category = category;
     }
 
-    public String getCover() {
-        return DataService.getBaseUrl() + cover;
+    public String getCover(boolean online) {
+        return online ? DataService.getBaseUrl() + cover : cover;
     }
 
     public void setCover(String cover) {
@@ -84,5 +123,6 @@ public class Comic implements Parcelable {
         dest.writeString(title);
         dest.writeString(category);
         dest.writeString(cover);
+        dest.writeString(description);
     }
 }

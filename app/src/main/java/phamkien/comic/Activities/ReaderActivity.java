@@ -52,7 +52,7 @@ public class ReaderActivity extends AppCompatActivity {
             }
         });
 
-        chapters = intent.getParcelableArrayListExtra(ChapterActivity.INTENT_CHAPTER);
+        chapters = intent.getParcelableArrayListExtra(ChapterActivity.INTENT_CHAPTERS);
         String curChap = intent.getStringExtra(ChapterActivity.INTENT_CURRENT_CHAPTER);
 
         setPages(curChap);

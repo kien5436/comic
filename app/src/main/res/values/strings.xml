@@ -2,7 +2,9 @@
     <string name="app_name">Comic</string>
     <string name="bookshelf">Tủ truyện</string>
     <string name="category">Thể loại</string>
+    <string name="description">Nội dung</string>
     <string name="my_book">Truyện của tôi</string>
+    <string name="downloaded">Tải về</string>
     <string name="read">Đọc</string>
     <string name="toc">Mục lục</string>
     <string name="empty">Không tìm thấy kết quả nào</string>

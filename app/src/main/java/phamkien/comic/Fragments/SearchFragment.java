@@ -57,7 +57,7 @@ public class SearchFragment extends Fragment {
 
                 if (comics.size() > 0) {
 
-                    bookshelfAdapter = new BookshelfAdapter(getContext(), comics);
+                    bookshelfAdapter = new BookshelfAdapter(getContext(), comics, SearchFragment.this);
                     gvBookShelf.setAdapter(bookshelfAdapter);
 
                     tvEmpty.setVisibility(View.GONE);
